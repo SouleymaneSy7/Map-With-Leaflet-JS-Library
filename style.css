@@ -1,0 +1,31 @@
+/* Poppins Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400;1,500;1,600&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #00203f;
+    color: white;
+    padding: 0 20px;
+    overflow: hidden;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+}
+
+#map {
+    height: 600px;
+}
