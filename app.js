@@ -1,5 +1,10 @@
 function init() {
     // Lattitude and Longitude
+
+    const coyah = {
+        lat: 9.725776,
+        lng: -13.4392083
+    }
     const aop = {
         lat: 9.7241320,
         lng: -13.4462353
@@ -42,9 +47,9 @@ function init() {
         }
     });
 
-    const greenIcon = new LeafIcon({iconUrl: './icons/leaf-green.png'}),
-    redIcon = new LeafIcon({iconUrl: './icons/leaf-red.png'}),
-    orangeIcon = new LeafIcon({iconUrl: './icons/leaf-orange.png'});
+    const greenIcon = new LeafIcon({iconUrl: './icons/leaf-green.png'})
+    const redIcon = new LeafIcon({iconUrl: './icons/leaf-red.png'})
+    const orangeIcon = new LeafIcon({iconUrl: './icons/leaf-orange.png'});
 
     
     // Marker
@@ -54,20 +59,8 @@ function init() {
     L.marker([salonThierno.lat, salonThierno.lng], {icon: orangeIcon}).addTo(map).bindPopup("Salon de Grand Thierno");
 
 
-    // Circle
-    const circle = L.circle([coyah.lat, coyah.lng], {
-        color: '#0063b1',
-        fillColor: '#adf0d1',
-        weight: '25px',
-        fillOpacity: 0.3,
-        radius: 500
-    }).addTo(map);
 
-    // Pop-up
-    const  ecoleMilitaire = L.popup()
-    .setLatLng([coyah.lat, coyah.lng])
-    .setContent("Ecole Militaire De Maneah")
-    .openOn(map)
+
 
     // Pop-up Click
     const  popupClick = L.popup();
@@ -75,7 +68,7 @@ function init() {
     const onMapClick = (e) => {
         popupClick
             .setLatLng(e.latlng)
-            .setContent("You clicked the map at " + e.latlng.toString())
+            .setContent("Vous avez clicker sur la  " + e.latlng.toString())
             .openOn(map);
     }
     
